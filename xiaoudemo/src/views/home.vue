@@ -35,21 +35,22 @@
         <!-- 商品切换 -->
         <van-tabs type="card">
             <van-tab title="热门推荐">
-                <van-card
-                    v-for="item in hotsList"
-                    :key="item.id"
+                <van-card v-for="(item,index) in hotsList"
+                    :key="index"
+                    @click="toDetail(item.id)"
                     class="card"
                     :price="item.price"
                     desc="热卖好货快来抢！！！"
                     :title="item.goodsname"
                     :thumb="$imgUrl+item.img"
-                    tag="热卖"
-                />
+                    tag="热卖" >
+                    </van-card>
             </van-tab>
             <van-tab title="发现新品">
                 <van-card
                     v-for="item in newsList"
-                    :key="item.id"
+                   :key="item.id" 
+                   @click="toDetail(item.id)"
                     class="card"
                     :price="item.price"
                     desc="新品发售预订"
@@ -62,6 +63,7 @@
                 <van-card
                     v-for="item in goodsList"
                     :key="item.id"
+                    @click="toDetail(item.id)"
                     class="card"
                     :price="item.price"
                     desc="快来了解一下该商品吧"
@@ -106,7 +108,17 @@ export default {
             })
         )
     },
-    methods: {},
+    methods: {
+        // 点击去详情页
+        toDetail(id){
+            this.$router.push({
+                path:'/detail?id='+id,
+                query:{
+                    id
+                }
+            })
+        }
+    },
 }
 </script>
 

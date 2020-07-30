@@ -11,9 +11,8 @@
         <div v-html="detailInfo.description"></div>
         <!-- 商品导航 -->
         <van-goods-action>
-            <van-goods-action-icon icon="chat-o" text="客服" @click="onClickIcon" />
             <van-goods-action-icon icon="cart-o" text="购物车" @click="onClickIcon" />
-            <van-goods-action-icon icon="shop-o" text="店铺" @click="onClickIcon" />
+            <van-goods-action-icon icon="shop-o" text="店铺" @click="onClickIcon1" />
             <van-goods-action-button type="danger" text="加入购物车" @click="onClickButton" />
         </van-goods-action>
     </div>
@@ -45,7 +44,10 @@ export default {
             })
         },
         onClickIcon() {
-            Toast('点击图标')
+            this.$router.push('/car')
+        },
+        onClickIcon1() {
+            this.$router.push('/classify')
         },
         onClickButton() {
             //调取加入购物车的方法
