@@ -20,7 +20,7 @@
         </div>
         <!-- </van-checkbox-group> -->
         <template #right>
-          <van-button square text="删除" @click="del(index)" type="danger" class="delete-button" />
+          <van-button square text="删除" @click="del(item.id)" type="danger" class="delete-button" />
         </template>
       </van-swipe-cell>
       <van-empty v-if="carList==null" description="购物车空空如也，快去买买买。。。" />
@@ -35,7 +35,7 @@
 <script>
 import { Toast } from "vant";
 // import { Checkbox, CheckboxGroup } from "vant";
-import { cartlist } from "../util/axios";
+import { cartlist,cartdelete } from "../util/axios";
 export default {
   data() {
     return {
@@ -75,7 +75,8 @@ export default {
     },
   },
   methods: {
-    getCarList() {
+    
+    getCarList() {  
       cartlist({
         uid: JSON.parse(sessionStorage.getItem("userInfo")).uid,
       }).then((res) => {
@@ -90,8 +91,11 @@ export default {
       });
     },
     // 删除事件
-    del(n) {
-      this.carList.splice(n, 1);
+    del(id) {
+      // this.carList.splice(id, 1);
+      cartdelete({id}).then(res=>{
+        this.getCarList()
+      })
     },
     // 数量增加
     add(a) {
@@ -133,7 +137,6 @@ export default {
 <style  lang="" scoped>
 .card {
   background: #fff !important;
-  /* margin-bottom: 10px !important; */
 }
 .delete-button {
   height: 82%;
@@ -179,7 +182,4 @@ export default {
   z-index: 9999;
 }
 
-.van-checkbox-group {
-  /* background: #f3f3f3; */
-}
 </style>
