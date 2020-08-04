@@ -6,6 +6,7 @@ import router from './router'
 //引入重置样式
 import '@/assets/css/reset.css'
 
+
 Vue.config.productionTip = false
 
 //引入vantUI框架

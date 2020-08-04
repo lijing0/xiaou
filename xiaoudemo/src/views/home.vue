@@ -180,13 +180,14 @@ export default {
         let timer = this.end - new Date().getTime();
         let t = setInterval(() => {
           timer--;
-          this.hours = parseInt((timer / 1000 / 60 / 60) % 24);
-          this.minutes = parseInt((timer / 1000 / 60) % 60);
-          this.seconds = parseInt((timer / 1000) % 60);
+        this.hours = parseInt((timer / 1000 / 60 / 60) % 24);
+        this.minutes = parseInt((timer / 1000 / 60) % 60);
+        this.seconds = parseInt((timer / 1000) % 60);
           if (this.minutes < 0) {
             clearInterval(t);
           }
         });
+        
         //倒计时思路： 获取结束时间与当前时间进行差值
         //把得到的结果进行转化
       })

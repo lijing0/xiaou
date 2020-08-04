@@ -1,0 +1,379 @@
+.content {
+  width: 375px;
+  margin: 0 auto;
+}
+
+.head-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  z-index: 1;
+}
+
+header {
+  background-color: #f26b11;
+  width: 375px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+header .wrap {
+  width: 350px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrap img {
+  width: 8.5px;
+  height: 14.5px;
+}
+
+header .wrap p {
+  color: #fff;
+  font-size: 17px;
+}
+
+header .wrap span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+header .wrap .two {
+  margin: 0 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: transparent;
+}
+
+footer .con {
+  width: 375px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 -1px 1.5px 0 #fafafa;
+}
+
+footer .con .foot-wrap {
+  width: 355px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .con .foot-wrap div {
+  width: 45px;
+  text-align: center;
+  color: #7d7d7d;
+}
+
+footer .con .foot-wrap div .iconfont {
+  font-size: 25px;
+  margin-bottom: 2.5px;
+}
+
+footer .con .foot-wrap div p {
+  font-size: 11px;
+}
+
+footer .con .foot-wrap .first {
+  color: #f26b11;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 11.5px;
+  text-align: center;
+  /*  默认的样式 */
+}
+
+.wrap {
+  width: 355px;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+  height: 600px;
+  padding-top: 45px;
+  margin-bottom: 50px;
+  background-color: #f1f1f1;
+}
+
+/*客户信息*/
+.costmer-information {
+  background-color: #fff;
+  height: 75px;
+  margin-bottom: 7px;
+}
+
+.costmer-information .wrap {
+  display: flex;
+}
+
+.costmer-information .wrap .text {
+  width: 325px;
+}
+
+.costmer-information .wrap .text p {
+  font-size: 12px;
+  color: #646464;
+  line-height: 25px;
+}
+
+.costmer-information .wrap .text .p1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.costmer-information .wrap .text .p2 {
+  display: flex;
+}
+
+@media screen and (width: 320px) {
+  .costmer-information .wrap .text .p2 .medial-s1 {
+    width: 75px;
+  }
+}
+
+.costmer-information .wrap .text .p2 .s2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+}
+
+.costmer-information .wrap .img-box {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.costmer-information .wrap .img-box img {
+  width: 9.5px;
+  height: 13px;
+}
+
+/*商品信息*/
+.pro-information {
+  background-color: #fff;
+  /* height: 3.6*50px; */
+  margin-bottom: 7px;
+}
+
+.pro-information .wrap .pro {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pro-information .wrap .pro .left {
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pro-information .wrap .pro .left img {
+  width: 51px;
+  height: 52.5px;
+}
+
+.pro-information .wrap .pro .left .text {
+  font-size: 12.5px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pro-information .wrap .pro .left .text .p1 {
+  color: #454545;
+}
+
+.pro-information .wrap .pro .left .text .p2 {
+  color: #b7b7b7;
+}
+
+.pro-information .wrap .pro .right {
+  font-size: 15px;
+  line-height: 65px;
+  color: #e7343a;
+}
+
+.pro-information .wrap .pro .right span {
+  font-size: 10px;
+}
+
+.pro-information .wrap .count {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pro-information .wrap .count p {
+  font-size: 12px;
+  color: #666;
+}
+
+.pro-information .wrap .count p span {
+  display: inline-block;
+  width: 36.5px;
+  height: 31.5px;
+  color: #454545;
+  line-height: 31.5px;
+  text-align: center;
+  border: 1px solid #454545;
+  border-radius: 2.5px;
+}
+
+.pro-information .wrap .count p .num {
+  width: 59px;
+}
+
+.pro-information .wrap .post {
+  height: 49.5px;
+  border-top: 1px solid #f1f1f1;
+  font-size: 12px;
+  color: #666;
+}
+
+.pro-information .wrap .post .wrap {
+  height: 49.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*优惠券*/
+.youhui {
+  height: 102.5px;
+  background-color: #fff;
+  margin-bottom: 7px;
+}
+
+.youhui .box1 {
+  height: 51px;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.youhui .box2 {
+  height: 51px;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.youhui .box2 .right {
+  display: flex;
+  align-items: center;
+}
+
+.youhui .box2 .right input {
+  width: 64px;
+  height: 24px;
+  padding: 5px;
+  border: 1px solid #999;
+  border-radius: 2.5px;
+}
+
+.youhui .box2 .right a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #f26b11;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.youhui .box2 .right p {
+  font-size: 11.5px;
+  color: #999;
+}
+
+.youhui .box2 .right p span {
+  color: #d62e3d;
+}
+
+ul {
+  height: 130px;
+  padding-bottom: 100px;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+ul li {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li span {
+  font-size: 12px;
+  color: #666;
+}
+
+ul li i {
+  font-size: 16px;
+  color: #d62e3d;
+}
+
+.submit {
+  height: 118px;
+  background-color: #fff;
+}
+
+.submit .money {
+  padding: 0 12.5px;
+  line-height: 62.5px;
+  text-align: right;
+  font-size: 16px;
+  color: #686868;
+}
+
+.submit .money span {
+  color: #d62e3d;
+}
+
+.submit a {
+  display: block;
+  width: 175px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 auto;
+  background-color: #f26b11;
+  color: #fff;
+}

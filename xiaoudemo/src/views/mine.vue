@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- 顶部导航 -->
-        <van-nav-bar :title="$route.meta.title" left-text="返回" left-arrow>
+        <van-nav-bar :title="$route.meta.title">
             <template #right>
                 <van-icon name="search" size="18" />
             </template>

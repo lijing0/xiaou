@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 顶部导航 -->
-    <van-nav-bar @click-left="$router.back()" :title="$route.meta.title" left-text="返回" left-arrow></van-nav-bar>
+    <van-nav-bar :title="$route.meta.title"  ></van-nav-bar>
     <van-list>
       <van-swipe-cell v-for="(item,index) in carList" :key="item.id">
         <input class="van-checkbox" type="checkbox" v-model="item.checked" />
@@ -25,7 +25,7 @@
       </van-swipe-cell>
       <van-empty v-if="carList==null" description="购物车空空如也，快去买买买。。。" />
 
-      <van-submit-bar :price="allPrice*100" button-text="提交订单">
+      <van-submit-bar :price="allPrice*100" button-text="去结算" @submit="onSubmit">
         <input type="checkbox" v-model="checkAll" @change="allCheck" />全选
       </van-submit-bar>
     </van-list>
@@ -41,8 +41,8 @@ export default {
     return {
       checkAll: false,
       value: 1,
-      carList: [],
-      result: [],
+      carList: [],//商品列表
+      result: [],//多选组
     };
   },
   watch: {
@@ -97,6 +97,22 @@ export default {
         this.getCarList()
       })
     },
+     //去结算
+    onSubmit() {
+      if (this.allPrice != 0) {
+        sessionStorage.setItem("allPrice", JSON.stringify(this.allPrice));
+        // this.$store.commit('allPrice',this.priceAll)
+        // console.log(this.result)
+        // let checkPro = this.result.map(item => {
+        //   return this.carList[item];
+        // });
+        // console.log(this.checkPro)
+        // sessionStorage.setItem("checkPro", JSON.stringify(checkPro));
+        this.$router.push("/order");
+      } else {
+        Toast("您还未选择商品");
+      }
+    },
     // 数量增加
     add(a) {
       if (this.carList[a].num == 99) {
@@ -137,6 +153,9 @@ export default {
 <style  lang="" scoped>
 .card {
   background: #fff !important;
+}
+.van-list{
+  margin-bottom: 120px;
 }
 .delete-button {
   height: 82%;
@@ -181,5 +200,7 @@ export default {
   top: 70px;
   z-index: 9999;
 }
-
+.van-submit-bar{
+  margin-bottom:50px;
+}
 </style>
